@@ -4,14 +4,14 @@
   font-family: 'Seagull';
   font-style: normal;
   font-weight: normal;
-  src: url('seagullm.ttf') format('woff');
+  src: url('/seagullm.ttf') format('woff');
 }
 
 @font-face {
   font-family: 'Seagull';
   font-style: italic;
   font-weight: normal;
-  src: url('seagull italic.ttf') format('woff');
+  src: url('/seagull italic.ttf') format('woff');
 }
 
 :root {
