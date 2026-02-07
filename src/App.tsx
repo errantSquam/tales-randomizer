@@ -31,94 +31,96 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col h-screen py-10 justify-start items-center gap-y-2"
-      style={{ backgroundColor: "#242424" }}>
+    <div className="min-h-screen min-w-screen text-white" style={{ backgroundColor: "#242424" }}>
+      <div className="flex flex-col h-screen py-10 justify-start items-center gap-y-2"
+        style={{ backgroundColor: "#242424" }}>
 
-      <div>
-        <h2 className="text-3xl">Tales Character Randomizer</h2>
-        <div className="text-white/50">May contain untagged spoilers!</div>
-      </div>
-      <div className="flex flex-col gap-y-4">
-        <p className="text-xl py-10 bg-black/50">
-          {character.character}
-          <p className="text-lg italic text-white/50">from Tales of {toTitleCase(character.game).replace("The", "the")}</p>
-        </p>
+        <div>
+          <h2 className="text-3xl">Tales Character Randomizer</h2>
+          <div className="text-white/50">May contain untagged spoilers!</div>
+        </div>
+        <div className="flex flex-col gap-y-4">
+          <p className="text-xl py-10 bg-black/50">
+            {character.character}
+            <p className="text-lg italic text-white/50">from Tales of {toTitleCase(character.game).replace("The", "the")}</p>
+          </p>
 
-        <button onClick={(e) => {
-          setRandomCharacter(getRandomCharacter())
-          if (confettiToggle && games.length !== 0) {
-            confetti({ position: { x: e.clientX, y: e.clientY }, fade: true })
-          }
-        }}
-          className={
-            games.length === 0 ? `bg-gray border-gray/50 border-1 rounded-xl p-4 
+          <button onClick={(e) => {
+            setRandomCharacter(getRandomCharacter())
+            if (confettiToggle && games.length !== 0) {
+              confetti({ position: { x: e.clientX, y: e.clientY }, fade: true })
+            }
+          }}
+            className={
+              games.length === 0 ? `bg-gray border-gray/50 border-1 rounded-xl p-4 
           text-white/70` : `bg-black border-white/50 border-1 rounded-xl p-4 
           text-white/70 hover:text-white hover:bg-slate-800 hover:border-white 
           transition cursor-pointer select-none`
-          }>
-          Random Character!
-        </button>
+            }>
+            Random Character!
+          </button>
 
-        <div className="flex flex-col p-4 border border-white/50 rounded">
-          <span> Filter</span>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-4">
-            {gameList.map((game) => {
-              return <div className="flex flex-row space-x-2">
+          <div className="flex flex-col p-4 border border-white/50 rounded">
+            <span> Filter</span>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-4">
+              {gameList.map((game) => {
+                return <div className="flex flex-row space-x-2">
 
-                <input type="checkbox" name={game}
-                  checked={games.includes(game)}
-                  onChange={((e) => {
-                    console.log(e.target.checked)
-                    if (e.target.checked === false) {
-                      if (games.includes(game)) {
-                        const tempList = games.filter((x) => x != game)
+                  <input type="checkbox" name={game}
+                    checked={games.includes(game)}
+                    onChange={((e) => {
+                      console.log(e.target.checked)
+                      if (e.target.checked === false) {
+                        if (games.includes(game)) {
+                          const tempList = games.filter((x) => x != game)
+                          setGames(tempList)
+                        }
+                      } else {
+                        const tempList = [...games, game]
                         setGames(tempList)
                       }
-                    } else {
-                      const tempList = [...games, game]
-                      setGames(tempList)
-                    }
-                  })} />
-                <span>{toTitleCase(game.replace("THE ", ""))}</span>
-              </div>
-            })}
-          </div>
+                    })} />
+                  <span>{toTitleCase(game.replace("THE ", ""))}</span>
+                </div>
+              })}
+            </div>
 
-          <div className="flex flex-row w-full justify-center space-x-2 mt-2">
-            <button onClick={() => setGames(gameList)}
-              className="bg-black border-white/50 border-1 rounded-xl px-2 
+            <div className="flex flex-row w-full justify-center space-x-2 mt-2">
+              <button onClick={() => setGames(gameList)}
+                className="bg-black border-white/50 border-1 rounded-xl px-2 
           text-white/70 hover:text-white hover:bg-slate-800 hover:border-white 
           transition cursor-pointer">
-              Select All
-            </button>
-            <button onClick={() => setGames([])}
-              className="bg-black border-white/50 border-1 rounded-xl px-2 
+                Select All
+              </button>
+              <button onClick={() => setGames([])}
+                className="bg-black border-white/50 border-1 rounded-xl px-2 
           text-white/70 hover:text-white hover:bg-slate-800 hover:border-white 
           transition cursor-pointer">
-              Select None
-            </button>
+                Select None
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="flex flex-row space-x-2 text-white/50">
-        <img src={"dymlosstare.png"} alt="Dymlos Stare" className="w-20" />
-        {
-          confettiToggle ?
-            <div>Hate fun like Dymlos?<br />
-              <span className="underline cursor-pointer" onClick={() => setConfettiToggle(false)}>
-                Turn off the confetti.
-              </span></div>
-            :
-            <div>
-              <span className="underline cursor-pointer" onClick={() => setConfettiToggle(true)}>
-                Turn on the confetti.
-              </span>
-            </div>
-        }
-      </div>
+        <div className="flex flex-row space-x-2 text-white/50">
+          <img src={"dymlosstare.png"} alt="Dymlos Stare" className="w-20" />
+          {
+            confettiToggle ?
+              <div>Hate fun like Dymlos?<br />
+                <span className="underline cursor-pointer" onClick={() => setConfettiToggle(false)}>
+                  Turn off the confetti.
+                </span></div>
+              :
+              <div>
+                <span className="underline cursor-pointer" onClick={() => setConfettiToggle(true)}>
+                  Turn on the confetti.
+                </span>
+              </div>
+          }
+        </div>
 
-      <div className="text-sm text-white/50 mt-10 italic">Coded by <a href="https://heckingsne.cc" className="underline">ErrantSquam</a>.</div>
+        <div className="text-sm text-white/50 mt-10 italic">Coded by <a href="https://heckingsne.cc" className="underline">ErrantSquam</a>.</div>
 
+      </div>
     </div>
   )
 }
