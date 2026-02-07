@@ -40,12 +40,12 @@ function App() {
           <div className="text-white/50">May contain untagged spoilers!</div>
         </div>
         <div className="flex flex-col gap-y-4">
-          <p className="text-xl py-10 bg-slate-950/50">
+          <p className="text-xl py-10 bg-black/50">
             {character.character}
             <p className="text-lg italic text-white/50">from Tales of {toTitleCase(character.game).replace("The", "the")}</p>
           </p>
 
-          <button onClick={(e) => {
+          <div onClick={(e) => {
             setRandomCharacter(getRandomCharacter())
             if (confettiToggle && games.length !== 0) {
               confetti({ position: { x: e.clientX, y: e.clientY }, fade: true })
@@ -53,12 +53,12 @@ function App() {
           }}
             className={
               games.length === 0 ? `bg-gray border-gray/50 border-1 rounded-xl p-4 
-          text-white/70` : `bg-slate-950 border-white/50 border-1 rounded-xl p-4 
+          text-white/70` : `bg-black border-white/50 border-1 rounded-xl p-4 
           text-white/70 hover:text-white hover:bg-slate-800 hover:border-white 
           transition cursor-pointer select-none`
             }>
             Random Character!
-          </button>
+          </div>
 
           <div className="flex flex-col p-4 border border-white/50 rounded">
             <span> Filter</span>
@@ -86,18 +86,18 @@ function App() {
             </div>
 
             <div className="flex flex-row w-full justify-center space-x-2 mt-2">
-              <button onClick={() => setGames(gameList)}
-                className="bg-slate-950 border-white/50 border-1 rounded-xl px-2 
+              <div onClick={() => setGames(gameList)}
+                className="bg-black border-white/50 border-1 rounded-xl px-2 
           text-white/70 hover:text-white hover:bg-slate-800 hover:border-white 
           transition cursor-pointer">
                 Select All
-              </button>
-              <button onClick={() => setGames([])}
-                className="bg-slate-950 border-white/50 border-1 rounded-xl px-2 
+              </div>
+              <div onClick={() => setGames([])}
+                className="bg-black border-white/50 border-1 rounded-xl px-2 
           text-white/70 hover:text-white hover:bg-slate-800 hover:border-white 
           transition cursor-pointer">
                 Select None
-              </button>
+              </div>
             </div>
           </div>
         </div>
