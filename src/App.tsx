@@ -116,6 +116,8 @@ function App() {
         }
       </div>
 
+      <div className="text-sm text-white/50 mt-10 italic">Coded by <a href="https://heckingsne.cc" className="underline">ErrantSquam</a>.</div>
+
     </div>
   )
 }
