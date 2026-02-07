@@ -31,7 +31,8 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col h-screen py-10 justify-start items-center gap-y-2">
+    <div className="flex flex-col h-screen py-10 justify-start items-center gap-y-2"
+      style={{ backgroundColor: "#242424" }}>
 
       <div>
         <h2 className="text-3xl">Tales Character Randomizer</h2>
