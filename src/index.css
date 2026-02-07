@@ -14,12 +14,12 @@
   src: url('/seagull italic.ttf') format('woff');
 }
 
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: dark only;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
