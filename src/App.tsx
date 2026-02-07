@@ -31,7 +31,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen min-w-screen text-white" style={{ backgroundColor: "#242424" }}>
+    <div className="min-h-100vh min-w-screen text-white" style={{ backgroundColor: "#242424" }}>
       <div className="flex flex-col h-screen py-10 justify-start items-center gap-y-2"
         style={{ backgroundColor: "#242424" }}>
 
@@ -40,7 +40,7 @@ function App() {
           <div className="text-white/50">May contain untagged spoilers!</div>
         </div>
         <div className="flex flex-col gap-y-4">
-          <p className="text-xl py-10 bg-black/50">
+          <p className="text-xl py-10 bg-slate-950/50">
             {character.character}
             <p className="text-lg italic text-white/50">from Tales of {toTitleCase(character.game).replace("The", "the")}</p>
           </p>
@@ -53,7 +53,7 @@ function App() {
           }}
             className={
               games.length === 0 ? `bg-gray border-gray/50 border-1 rounded-xl p-4 
-          text-white/70` : `bg-black border-white/50 border-1 rounded-xl p-4 
+          text-white/70` : `bg-slate-950 border-white/50 border-1 rounded-xl p-4 
           text-white/70 hover:text-white hover:bg-slate-800 hover:border-white 
           transition cursor-pointer select-none`
             }>
@@ -87,13 +87,13 @@ function App() {
 
             <div className="flex flex-row w-full justify-center space-x-2 mt-2">
               <button onClick={() => setGames(gameList)}
-                className="bg-black border-white/50 border-1 rounded-xl px-2 
+                className="bg-slate-950 border-white/50 border-1 rounded-xl px-2 
           text-white/70 hover:text-white hover:bg-slate-800 hover:border-white 
           transition cursor-pointer">
                 Select All
               </button>
               <button onClick={() => setGames([])}
-                className="bg-black border-white/50 border-1 rounded-xl px-2 
+                className="bg-slate-950 border-white/50 border-1 rounded-xl px-2 
           text-white/70 hover:text-white hover:bg-slate-800 hover:border-white 
           transition cursor-pointer">
                 Select None
