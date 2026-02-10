@@ -12,7 +12,7 @@ function App() {
   const gameList = ['PHANTASIA', 'DESTINY', 'ETERNIA', 'DESTINY 2', 'SYMPHONIA',
     'REBIRTH', 'LEGENDIA', 'THE ABYSS', 'THE TEMPEST', 'INNOCENCE', 'SYMPHONIA 2',
     'VESPERIA', 'HEARTS', 'GRACES', 'XILLIA', 'XILLIA 2', 'ZESTIRIA', 'BERSERIA',
-    'ARISE']
+    'ARISE', 'THE RAYS', 'CRESTORIA']
 
 
   const [games, setGames] = useState(gameList)
@@ -572,7 +572,43 @@ const characterList = {
     "Almeidrea Kaineris",
     "Vholran Igniseri",
     "Zephyr"
-  ]
+  ],
+  "THE RAYS": [
+    "Ix Nieves",
+    "Mileena Weiss",
+    "Karia",
+    "Kocis",
+    "Marcus Grimm",
+    "Gefion",
+    "Karia Neamhain",
+    "Bique Phillip Reston",
+    "Nuadha",
+    "Mercuria",
+    "Gareth Outrigger",
+    "Cecily",
+    "Kodama Atwood",
+    "Haze Cesario Iseafeldt",
+    "Iris Lovefeather",
+    "Seiros Vaftro",
+    "Balso Mistleton",
+    "Liwanna Gimlay",
+    "Ernat Perusha",
+    "Demitrius",
+    "Glastian Lysander",
+    "Biqe Yalanda Odanse"
+  ],
+  "CRESTORIA": [
+    "Kanata Hjuger",
+    "Misella",
+    "Vicious",
+    "Aegis Alver",
+    "Yuna Azetta",
+    "Orwin Granberg",
+    "Makina",
+    "Forte",
+    "Assid",
+    "Kasque"
+  ],
 }
 
 
