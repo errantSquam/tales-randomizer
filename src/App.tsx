@@ -162,7 +162,7 @@ const characterList = {
     "Ilene Rembrandt",
     "Shane Rembrandt",
     "Batista Diego",
-    "Tiberius Terazzi",
+    "Tiberius Toukei",
     "Dalis Vincent",
     "Reynolds",
     "Dymlos Timber",
