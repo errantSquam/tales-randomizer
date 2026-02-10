@@ -428,7 +428,7 @@ const characterList = {
     "Beryl Benito",
     "Kunzite",
     "Chalcedony Arkham",
-    "Lithia Spodume",
+    "Lithia Spodune",
     "Gall Gruner",
     "Incarose",
     "Creed Graphyte",
